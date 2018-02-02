@@ -2,7 +2,12 @@ package print3;
 
 import simulation.Simulation;
 
-public class Print3 implements Simulation {
+public class Print3 extends Simulation<Print3> {
+
+  @Override
+  public Print3 getState() {
+    return this;
+  }
 
   @Override
   protected boolean stop() {
